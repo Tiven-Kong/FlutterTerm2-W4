@@ -1,17 +1,20 @@
-// mock_location_repository.dart
-import 'package:flutter/material.dart';
-import '../model/ride/locations.dart';
+
+
+import '../../model/ride/locations.dart';
 import 'location_respository.dart';
 
-class MockLocationsRepository implements LocationsRepository {
+class MockLocationsRepository extends LocationsRepository {
+  final List<Location> _locations = [
+    Location(country: Country.cambodia, name: "Phnom Penh"),
+    Location(country: Country.cambodia, name: "Siem Reap"),
+    Location(country: Country.cambodia, name: "Sihanoukville"),
+
+  ];
+
   @override
   List<Location> getLocations() {
-    return [
-      Location(name: "Phnom Penh", country: Country.cambodia),
-      Location(name: "Siem Reap", country: Country.cambodia),
-      Location(name: "Battambang", country: Country.cambodia),
-      Location(name: "Sihanoukville", country: Country.cambodia),
-      Location(name: "Kampot", country: Country.cambodia),
-    ];
+    return _locations;
   }
+
+
 }

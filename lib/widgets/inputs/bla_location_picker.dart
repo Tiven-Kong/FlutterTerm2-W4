@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../../model/ride/locations.dart';
 import '../../service/locations_service.dart';
 import '../../theme/theme.dart';
-
 ///
 /// This full-screen modal is in charge of providing (if confirmed) a selected location.
 ///
@@ -55,7 +54,7 @@ class _BlaLocationPickerState extends State<BlaLocationPicker> {
   }
 
   List<Location> getLocationsFor(String text) {
-    return LocationsService.availableLocations
+    return LocationsService.instance.availableLocations!
         .where((location) =>
             location.name.toUpperCase().contains(text.toUpperCase()))
         .toList();

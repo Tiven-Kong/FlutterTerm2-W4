@@ -3,6 +3,7 @@ import '../model/ride/ride.dart';
 import '../model/ride_pref/ride_pref.dart';
 import '../model/user/user.dart';
 import 'dart:math';
+import '../service/rides_service.dart';
 
 final Random random = Random();
 
